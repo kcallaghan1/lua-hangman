@@ -41,8 +41,9 @@ function test_contains()
     results[2] = compareIsFalse(util.contains(word, "zzz"))
     results[3] = compareIsTrue(util.contains(word, ""))
     results[4] = compareIsTrue(util.contains(word, "he "))
+    results[5] = compareIsFalse(util.contains(word, "he 5"))
 
-    for i= 0, 4 do
+    for i= 0, 5 do
         if(results[i] == false) then
             return false
         end
